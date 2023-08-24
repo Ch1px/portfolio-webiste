@@ -21,19 +21,24 @@ module.exports = {
       xl: '1200px',
     },
     extend: {
+      boxShadow:{
+        neon: "0 0 15px theme('colors.green.100'), 0 0 50px theme('colors.accent')",
+        neons: "0 0 5px theme('colors.green.100'), 0 0 10px theme('colors.accent')",
+      },
+
       colors: {
-        primary: '#131424',
-        secondary: '#393A47',
-        accent: '#F13024',
+        primary: '#111111',
+        secondary: '#000000',
+        accent: '#00796B',
       },
       backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
+        explosion: 'url("/bg-explosion2.png")',
         circles: 'url("/bg-circles.png")',
         circleStar: 'url("/circle-star.svg")',
         site: 'url("/site-bg.svg")',
       },
       animation: {
-        'spin-slow': 'spin 6s linear infinite',
+        'spin-slow': 'spin 10s linear infinite',
       },
       fontFamily: {
         poppins: [`var(--font-poppins)`, 'sans-serif'],
