@@ -6,7 +6,7 @@ const sora = Sora({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 });
 
-import Nav from '../components/Nav'
+import Socials from '../components/Socials'
 import Header from '../components/Header'
 import TopLeftImg from '../components/TopLeftImg'
 
@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
   return (
     <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
       <TopLeftImg />
-      <Nav />
+      <Socials />
       <Header />
       {children}
     </div>
