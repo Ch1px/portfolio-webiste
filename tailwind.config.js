@@ -22,14 +22,14 @@ module.exports = {
     },
     extend: {
       boxShadow:{
-        neon: "0 0 15px theme('colors.green.100'), 0 0 50px theme('colors.accent')",
-        neons: "0 0 5px theme('colors.green.100'), 0 0 10px theme('colors.accent')",
+        neon: "0 0 15px theme('colors.blue.100'), 0 0 50px theme('colors.secondary')",
+        neons: "0 0 5px theme('colors.blue.100'), 0 0 10px theme('colors.secondary')",
       },
 
       colors: {
         primary: '#111111',
-        secondary: '#000000',
-        accent: '#00bfff',
+        secondary: '#00bfff',
+        accent: '#E3256B',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion2.png")',
