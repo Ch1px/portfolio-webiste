@@ -1,8 +1,8 @@
-import { Sora } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
-const sora = Sora({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-sora',
+  variable: '--font-poppins',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 });
 
@@ -12,7 +12,7 @@ import TopLeftImg from '../components/TopLeftImg'
 
 const Layout = ({ children }) => {
   return (
-    <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
+    <div className={`page bg-site text-white bg-cover bg-no-repeat ${poppins.variable} font-poppins relative`}>
       <TopLeftImg />
       <Socials />
       <Header />

@@ -46,7 +46,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "/JPcert.png",
+    image: "/project.png",
     source_code_link: "https://github.com/",
   },
   {
