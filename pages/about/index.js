@@ -104,7 +104,7 @@ const aboutData = [
     ],
   },
   {
-    title: 'credentials',
+    title: 'education',
     info: [
       {
         title: 'Computer Science Bachelor Degree - Liverpool Hope University',

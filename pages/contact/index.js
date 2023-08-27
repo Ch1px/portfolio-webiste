@@ -5,6 +5,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants'
 import Circles from "../../components/Circles";
+import Earth from "../../components/Earth";
 
 
 const Contact = () => {
@@ -68,6 +69,7 @@ const Contact = () => {
         </motion.div>
       </div>
       <Circles/>
+      <Earth/>
     </div>
   )
 }

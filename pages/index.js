@@ -6,7 +6,9 @@ import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
 
 import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
+import { fadeIn } from '../variants'
+
+import { TypeAnimation } from 'react-type-animation';
 
 
 const Home = () => {
@@ -20,7 +22,19 @@ const Home = () => {
             animate="show"
             exit="hidden"
             className="h1">
-            Transforming ideas <br /> Into <span className="text-accent">Digital Reality</span>
+            Transforming ideas <br /> Into     <TypeAnimation
+      sequence={[
+        // Same substring at the start will only be typed out once, initially
+        'Digital Reality',
+        1000,
+        '',
+        1000
+      ]}
+      wrapper="span"
+      speed={50}
+      repeat={Infinity}
+      className="text-accent"
+    />
           </motion.h1>
           <motion.p
             variants={fadeIn('down', 0.3)}

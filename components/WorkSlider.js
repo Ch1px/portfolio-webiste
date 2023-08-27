@@ -19,27 +19,28 @@ const projects = {
 
           title: 'Solar Explore Website',
           path: '/project.png',
-          icon: <FaGithub />,
+          icon: <FaGithub size={22}/>,
           link: 'https://github.com/Ch1px/Solar-Explorer',
           webURL: 'https://solar-explore.netlify.app/',
-          webIcon: <FaLink />
+          webIcon: <FaLink size={22}/>
         },
         {
           title: 'Solar Explore Android app',
           path: '/android.png',
-          icon: <FaGithub />,
+          icon: <FaGithub size={22}/>,
           link: "https://github.com/",
         },
         {
           title: 'Sign Language Recognition',
           path: '/thumb2.jpg',
-          icon: <FaGithub />,
+          icon: <FaGithub size={22}/>,
           link: "https://github.com/",
         },
         {
 
           title: 'Universe Sandbox',
           path: '/USproject.png',
+          icon: <FaGithub size={22}/>,
           link: "https://github.com/",
         },
       ],
@@ -49,15 +50,15 @@ const projects = {
         {
           title: 'Face Emotion Recognition',
           path: '/project.png',
-          icon: <FaGithub />,
+          icon: <FaGithub size={22}/>,
           link: "https://github.com/",
         },
         {
           title: 'Free lance company website',
           path: '/project.png',
-          icon: <FaGithub />,
+          icon: <FaGithub size={22}/>,
           link: "https://github.com/",
-          webIcon: <FaLink />
+          webIcon: <FaLink size={22}/>
         },
 
       ],
@@ -94,10 +95,16 @@ const WorkSlider = () => {
                             <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] flex-col">
                               <div className="delay-100 pb-2">{image.title}</div>
                               <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150 cursor-pointer flex gap-4">
-                                <a href={image.link} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                                <a href={image.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="hover:text-accent">
                                   {image.icon}
                                 </a>
-                                <a href={image.webURL} target="_blank" rel="noopener noreferrer" className="hover:text-accent">
+                                <a href={image.webURL}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="hover:text-accent">
                                   {image.webIcon}
                                 </a>
                               </div>

@@ -19,6 +19,7 @@
     "react-icons": "^4.8.0",
     "react-parallax-tilt": "^1.7.163",
     "react-tsparticles": "^2.9.3",
+    "react-type-animation": "^3.1.0",
     "styled-components": "^6.0.7",
     "swiper": "^9.4.0",
     "tailwind-scrollbar": "^3.0.4",
