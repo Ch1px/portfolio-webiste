@@ -16,11 +16,7 @@ const projects = {
     {
       images: [
         {
-          title: 'Universe Sandbox',
-          path: '/USproject.png',
-          link: ''
-        },
-        {
+
           title: 'Solar Explore',
           path: '/project.png',
           icon: <FaGithub />,
@@ -35,6 +31,12 @@ const projects = {
           title: 'Sign Language Recognition',
           path: '/thumb2.jpg',
           icon: <FaGithub />,
+        },
+        {
+
+          title: 'Universe Sandbox',
+          path: '/USproject.png',
+          link: ''
         },
       ],
     },

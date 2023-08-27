@@ -41,7 +41,7 @@ import { fadeIn } from '../../variants'
 //  data
 const aboutData = [
   {
-    title: 'skills',
+    title: 'tools',
     info: [
       {
         title: 'Frontend Web Development',
@@ -149,7 +149,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px] bg-black/60 p-6 rounded-md shadow-neon'>
+          className='flex flex-col w-full xl:max-w-[48%] h-[480px]  p-6 rounded-md'>
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => {
               return (
