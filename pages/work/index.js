@@ -4,6 +4,7 @@ import { fadeIn } from '../../variants'
 import Tilt from 'react-parallax-tilt';
 
 import { FaGithub } from 'react-icons/fa'
+import WorkSlider from '../../components/WorkSlider';
 
 
 const projects = [
@@ -25,7 +26,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: "/bri.png",
+    image: "/USproject.png",
     source_code_link: "https://github.com/",
   },
   {
@@ -85,13 +86,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           scale: 1,
           speed: 450
         }}
-        className="bg-primary/50 p-5 rounded-2xl sm:w-[360px] w-full">
+        className="bg-primary/50 p-5 rounded-2xl sm:w-[260px] w-full">
 
-        <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[150px]'>
           <img
             src={image}
             alt={name}
-            className='w-full h-full object-cover rounded-2xl' />
+            className='w-full h-full object-fit rounded-2xl' />
 
           <div className='absolute inset-0 flex justify-end m-2 card-img_hover'>
             <div onClick={() => window.open(source_code_link, "_blank")}
@@ -103,7 +104,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
         <div className='mt-5'>
           <h3>{name}</h3>
-          <h3>{description}</h3>
+          <p className='p text-sm'>{description}</p>
         </div>
       </Tilt>
     </motion.div>
@@ -113,12 +114,26 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 const Work = () => {
   return (
-    <div className='flex flex-wrap gap-7 justify-center items-center h-full'>
-      {projects.map((project, index) =>
-        <ProjectCard
-          key={`project-${index}`}
-          index={index}
-          {...project} />)}
+    <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
+        <Circles />
+
+          <WorkSlider/>
+
+        <motion.div
+          variants={fadeIn('right', 0.2)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className='flex-2 flex flex-col justify-center'>
+          <h2 className='h2'>
+            Creative <span className='text-accent'>works</span>
+          </h2>
+          <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
+          Dive into a curated collection of my projects, where innovation meets passion. Each endeavor showcases my dedication to pushing boundaries, solving problems, and creating impactful solutions. Whether it's technology, design, or any other domain, journey with me to see how I bring ideas to life!
+          </p>
+        </motion.div>
+      </div>
     </div>
   );
 };
