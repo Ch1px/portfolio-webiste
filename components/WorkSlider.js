@@ -1,120 +1,103 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import Tilt from 'react-parallax-tilt';
 
 import 'swiper/css';
 import 'swiper/css/free-mode'
 import 'swiper/css/pagination'
 
-import { FreeMode, Pagination } from "swiper";
+import { Pagination } from "swiper";
+
+import { FaGithub } from 'react-icons/fa'
 // data
-const projects = [
-  {
-    name: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices vitae auctor eu augue ut lectus.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "/USproject.png",
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices vitae auctor eu augue ut lectus.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "/project.png",
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Lorem ipsum",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices vitae auctor eu augue ut lectus.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "/bri.png",
-    source_code_link: "https://github.com/",
-  },
-];
+const projects = {
+  slides: [
+    {
+      images: [
+        {
+          title: 'Universe Sandbox',
+          path: '/USproject.png',
+          link: ''
+        },
+        {
+          title: 'Solar Explore',
+          path: '/project.png',
+          icon: <FaGithub />,
+          link: 'https://github.com/Ch1px/Solar-Explorer',
+        },
+        {
+          title: 'Solar Explore Android app',
+          path: '/android.png',
+          icon: <FaGithub />,
+        },
+        {
+          title: 'Sign Language Recognition',
+          path: '/thumb2.jpg',
+          icon: <FaGithub />,
+        },
+      ],
+    },
+    {
+      images: [
+        {
+          title: 'Face Emotion Recognition',
+          path: '/project.png',
+          icon: <FaGithub />,
+        },
+        {
+          title: 'Free lance company website',
+          path: '/project.png',
+          icon: <FaGithub />,
+        },
+
+      ],
+    },
+  ],
+};
 
 const WorkSlider = () => {
   return (
     <Swiper
-      breakpoints={{
-        320: {
-          slidePerView: 1,
-          spaceBetween: 15,
-        },
-        640: {
-          slidePerView: 3,
-          spaceBetween: 15,
-        },
-      }}
-      freeMode={true}
+      spaceBetween={10}
       pagination={{
-        clickable: true
+        clickable: true,
       }}
-      modules={{ FreeMode, Pagination }}
-      className="h-[280px] sm:h-[370px] bg-black/30 w-[320px] rounded-lg"
+      modules={[Pagination]}
+      className="h-[280px] sm:h-[470px]"
     >
       {
-        projects.map((item, index) => {
+        projects.slides.map((slide, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-4 py-4 flex
-              sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer ">
-                <div className="relative w-full h-[150px]">
-                  <img
-                    className="w-full h-full object-fit rounded-lg"
-                    src={item.image}
-                    alt={item.name} />
-                </div>
-                <div>
-                  <div>{item.name}</div>
-                  <p>{item.description}</p>
-                </div>
+              <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer xl:mt-2">
+                {slide.images.map((image, index) => {
+                  return (
+                    <div className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                      key={index}>
+                      <Tilt>
+                        <div className="flex items-center justify-center relative overflow-hidden">
+                          <Image src={image.path} width={500} height={300} alt="" />
+                          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#36c8e2] 
+                        to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                          <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20
+                          transition-all duration-300 text-center">
+                            <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                              <div className="delay-100">{image.title}</div>
+                              <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">{image.icon}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </Tilt>
+                    </div>
+                  )
+                })}
               </div>
             </SwiperSlide>
           )
         })
       }
-      Work Slider</Swiper>);
+    </Swiper>);
 };
 
 export default WorkSlider;

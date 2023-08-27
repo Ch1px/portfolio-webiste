@@ -73,66 +73,34 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
-  return (
-    <motion.div
-      variants={fadeIn('up', 0.2)}
-      initial="hidden"
-      animate="show"
-      exit="hidden">
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450
-        }}
-        className="bg-primary/50 p-5 rounded-2xl sm:w-[260px] w-full">
 
-        <div className='relative w-full h-[150px]'>
-          <img
-            src={image}
-            alt={name}
-            className='w-full h-full object-fit rounded-2xl' />
-
-          <div className='absolute inset-0 flex justify-end m-2 card-img_hover'>
-            <div onClick={() => window.open(source_code_link, "_blank")}
-              className='bg-gradient-to-r from-zinc-700 via-zinc-900 to-black 
-                w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:shadow-neons'>
-              <div className='object-contain'><FaGithub /></div>
-            </div>
-          </div>
-        </div>
-        <div className='mt-5'>
-          <h3>{name}</h3>
-          <p className='p text-sm'>{description}</p>
-        </div>
-      </Tilt>
-    </motion.div>
-  )
-}
 
 
 const Work = () => {
   return (
-    <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
-      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
-        <Circles />
+    <div className='h-full bg-primary/60 py-36 flex items-center'>
+      <Circles />
+      <div className='container mx-auto'>
+        <div className='flex flex-col xl:flex-row gap-x-8'>
 
-          <WorkSlider/>
+            <WorkSlider />
 
-        <motion.div
-          variants={fadeIn('right', 0.2)}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-          className='flex-2 flex flex-col justify-center'>
-          <h2 className='h2'>
-            Creative <span className='text-accent'>works</span>
-          </h2>
-          <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-          Dive into a curated collection of my projects, where innovation meets passion. Each endeavor showcases my dedication to pushing boundaries, solving problems, and creating impactful solutions. Whether it's technology, design, or any other domain, journey with me to see how I bring ideas to life!
-          </p>
-        </motion.div>
+          <motion.div
+            variants={fadeIn('right', 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className='text-center flex xl:w-[45vw] flex-col lg:text-left mb-4 xl:mb-0'>
+            <h2 className='h2 xl:mt-12'>
+              Creative <span className='text-accent'>works</span>
+            </h2>
+            <p className='max-w-[400px] mx-auto mb-4 lg:mx-0'>
+              Dive into a curated collection of my projects, where innovation meets passion. Each endeavor showcases my dedication to pushing boundaries, solving problems, and creating impactful solutions. Whether it's technology, design, or any other domain, journey with me to see how I bring ideas to life!
+            </p>
+          </motion.div>
+
+        </div>
+
       </div>
     </div>
   );
