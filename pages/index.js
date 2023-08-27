@@ -23,18 +23,17 @@ const Home = () => {
             exit="hidden"
             className="h1">
             Transforming ideas <br /> Into     <TypeAnimation
-      sequence={[
-        // Same substring at the start will only be typed out once, initially
-        'Digital Reality',
-        1000,
-        '',
-        1000
-      ]}
-      wrapper="span"
-      speed={50}
-      repeat={Infinity}
-      className="text-accent"
-    />
+              sequence={[
+                'Digital Reality',
+                1000,
+                '',
+                1000
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="text-accent"
+            />
           </motion.h1>
           <motion.p
             variants={fadeIn('down', 0.3)}
@@ -64,14 +63,14 @@ const Home = () => {
         xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
 
         <div>
-          <ParticlesContainer/>
+          <ParticlesContainer />
         </div>
 
         <motion.div
           variants={fadeIn('up', 0.5)}
           initial="hidden"
           animate="show"
-          exit="hidden" 
+          exit="hidden"
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-10
         lg:bottom-0 lg:right-[10%]">
           <Avatar />

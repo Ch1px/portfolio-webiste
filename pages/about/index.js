@@ -136,7 +136,7 @@ const About = () => {
           exit="hidden"
           className='flex-1 flex flex-col justify-center'>
           <h2 className='h2'>
-            Captivating <span className='text-accent'>stories </span>birth magnificant designs
+          Where <span className='text-accent'>stories inspire </span>designs become reality
           </h2>
           <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>Hello! I'm Daniel, a recent computer science graduate
             with a fervor for crafting intuitive web interfaces. University honed my technical foundation and sparked my passion for

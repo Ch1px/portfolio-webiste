@@ -9,16 +9,16 @@ import WorkSlider from '../../components/WorkSlider';
 
 const Work = () => {
   return (
-    <div className='h-full bg-primary/60 py-36 flex items-center'>
+    <div className='h-full bg-primary/30 py-36 flex items-center'>
       <Bulb/>
       <Circles />
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-x-8'>
-
+        
             <WorkSlider />
 
           <motion.div
-            variants={fadeIn('right', 0.2)}
+            variants={fadeIn('up', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"

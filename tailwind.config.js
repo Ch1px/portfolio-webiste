@@ -22,7 +22,7 @@ module.exports = {
     },
     extend: {
       boxShadow:{
-        neon: "0 0 15px theme('colors.blue.100'), 0 0 50px theme('colors.secondary')",
+        neon: "0 0 2px theme('colors.blue.100'), 0 0 5px theme('colors.secondary')",
         neons: "0 0 5px theme('colors.blue.100'), 0 0 10px theme('colors.secondary')",
       },
 
@@ -32,7 +32,7 @@ module.exports = {
         accent: '#E3256B',
       },
       backgroundImage: {
-        explosion: 'url("/bg-explosion2.png")',
+        explosion: 'url("/glasss.png")',
         circles: 'url("/bg-circles.png")',
         circleStar: 'url("/circle-star.svg")',
         site: 'url("/site-bg.svg")',
